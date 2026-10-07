@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Database, Play, RotateCcw, Table2 } from 'lucide-react';
 
-const API = 'http://localhost:3000/api';
+const API = import.meta.env.VITE_API_URL ?? 'http://localhost:3000';
 const examples = [
   { label: 'Create users table', query: 'CREATE TABLE users (id INT, name TEXT);' },
   { label: 'Insert a user', query: "INSERT INTO users VALUES (1, 'Nitin');" },
